@@ -1,5 +1,17 @@
 # Image Synthesis from Semantic Labeling
 
+
+
+**Course:** Generative AI Models  
+**University:** National Polytechnic University of Armenia 
+**Department:** Department of Computer Science  
+**Professor:** Prof. Avetisyan Varazdat 
+**Semester:** Spring 2026
+
+**Students: Sona Davtyan, Emilia Nahapetyan**
+
+
+
 A complete from-scratch implementation of a **Conditional GAN (Pix2Pix-style)** for generating photorealistic images from semantic label maps, built entirely with PyTorch primitives.
 
 ```
