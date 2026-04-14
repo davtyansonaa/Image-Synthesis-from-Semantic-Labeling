@@ -1,6 +1,6 @@
 # Image Synthesis from Semantic Labeling
 
-<div align="center">
+<div align="left">
 
 **Course:** Generative AI Models  
 **University:** National Polytechnic University of Armenia  
