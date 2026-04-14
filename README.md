@@ -1,8 +1,7 @@
 # Image Synthesis from Semantic Labeling
 
 A from-scratch implementation of a **Conditional GAN** for generating photorealistic images
-from semantic label maps. Built with PyTorch — all GAN components (Generator, Discriminator,
-losses) are hand-written with no external GAN libraries.
+from semantic label maps. 
 
 ## Architecture
 
