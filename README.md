@@ -7,6 +7,7 @@
 **Department:** Department of Computer Science
 **Professor:** Prof. Avetisyan Varazdat
 **Semester:** Spring 2026
+
 **Students: Sona Davtyan, Emilia Nahapetyan**
 
 
