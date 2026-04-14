@@ -34,16 +34,17 @@ Semantic Label Map ──► U-Net Generator ──► Synthesized Image
 image-synthesis-semantic/
 ├── README.md
 ├── requirements.txt
-├── config.py              # All hyperparameters & paths
-├── dataset.py             # Dataset loader (Cityscapes / Facades / custom)
 ├── models/
 │   ├── __init__.py
-│   ├── generator.py       # U-Net Generator (from scratch)
-│   ├── discriminator.py   # PatchGAN Discriminator (from scratch)
-│   └── losses.py          # GAN losses (from scratch)
-├── train.py               # Training loop
-├── inference.py           # Generate images from label maps
-└── utils.py               # Visualization, checkpointing, metrics
+│   ├── generator.py       # U-Net Generator
+│   ├── discriminator.py   # PatchGAN Discriminator
+│   └── losses.py          # GAN losses
+├── outouts/
+│   ├── inference/
+│   ├── logs/
+│   └── samples/
+├── facade_painter.py      # a simple GUI for demonstation 
+└── image-synhesis-semantic-labeling.ipynb
 ```
 
 ## Setup
@@ -57,34 +58,18 @@ pip install -r requirements.txt
 The project supports **paired datasets** where each sample is a side-by-side image
 containing the semantic label map and the corresponding real photo.
 
-### Option A: Facades Dataset (small, good for testing)
+### Option A: Facades Dataset 
 ```bash
 python dataset.py --download facades
 ```
 
 ### Option B: Cityscapes
 1. Download from https://www.cityscapes-dataset.com/
-2. Set paths in `config.py`
+
 
 ### Option C: Custom Dataset
 Place paired images (label|photo side-by-side) in a folder and point `config.py` to it.
 
-## Training
-
-```bash
-# Train with default config (Facades dataset)
-python train.py
-
-# Train with custom settings
-python train.py --dataset_dir ./data/facades \
-                --epochs 200 \
-                --batch_size 4 \
-                --image_size 256 \
-                --lr 0.0002 \
-                --lambda_l1 100.0
-```
-
-Training saves checkpoints and sample visualizations to `./outputs/`.
 
 ## Inference
 
